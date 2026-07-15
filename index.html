@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Lou-Ann & Giulia</title>
 
 <style>
@@ -73,35 +75,143 @@ p{
     width:600px;
     height:600px;
     background:var(--orange);
-
     top:-250px;
     right:-200px;
-
-    border-radius:
-        60% 40% 50% 50% /
-        50% 60% 40% 50%;
+    border-radius:60% 40% 50% 50% / 50% 60% 40% 50%;
 }
 
 .yellow{
     width:400px;
     height:400px;
     background:var(--yellow);
-
     bottom:-150px;
     left:-150px;
-
-    border-radius:
-        50% 60% 40% 50% /
-        60% 40% 60% 40%;
+    border-radius:50% 60% 40% 50% / 60% 40% 60% 40%;
 }
 
 .green{
     width:250px;
     height:250px;
     background:var(--green);
-
     right:-60px;
     bottom:80px;
+    border-radius:60% 40% 60% 40% / 40% 60% 40% 60%;
+}
 
-    border-radius:
-        60% 40% 
+.fade-in{
+    opacity:0;
+    transform:translateY(60px);
+    transition:all 1s ease;
+}
+
+.fade-in.visible{
+    opacity:1;
+    transform:translateY(0);
+}
+
+</style>
+</head>
+
+<body>
+
+<section>
+
+<div class="blob orange"></div>
+<div class="blob yellow"></div>
+<div class="blob green"></div>
+
+<div class="content">
+    <h1>Lou‑Ann & Giulia</h1>
+    <p>Welcome to our wedding website</p>
+</div>
+
+</section>
+
+<section>
+
+<div class="blob orange"></div>
+<div class="blob yellow"></div>
+
+<div class="content fade-in">
+
+.jpeg"
+    alt="Brunch together"
+    class="story-photo">
+
+<h1>Our Story</h1>
+
+<p>
+Every great adventure begins with a simple meeting.
+What started with brunches, conversations and laughter
+slowly turned into a beautiful life shared together.
+</p>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="blob green"></div>
+<div class="blob yellow"></div>
+
+<div class="content fade-in">
+
+images/adventure.jpegAdventure together"
+    class="story-photo">
+
+<h1>Our Adventures</h1>
+
+<p>
+From quiet weekends to unforgettable journeys,
+the best moments have always been the ones spent together.
+</p>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="blob orange"></div>
+
+<div class="content fade-in">
+    <h1>The Wedding</h1>
+    <p>Date, venue and practical information coming soon.</p>
+</div>
+
+</section>
+
+<section>
+
+<div class="blob green"></div>
+
+<div class="content fade-in">
+    <h1>RSVP</h1>
+    <p>Please let us know if you can attend.</p>
+</div>
+
+</section>
+
+<script>
+
+const observer = new IntersectionObserver(entries => {
+
+    entries.forEach(entry => {
+
+        if(entry.isIntersecting){
+            entry.target.classList.add("visible");
+        }
+
+    });
+
+});
+
+document.querySelectorAll(".fade-in").forEach(el => {
+    observer.observe(el);
+});
+
+</script>
+
+</body>
+</html>
