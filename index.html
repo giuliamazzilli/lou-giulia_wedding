@@ -1,11 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Lou-Ann & Giulia</title>
 
 <style>
@@ -24,13 +21,11 @@ html{
 
 body{
     margin:0;
-    overflow-x:hidden;
-    font-family:"Helvetica Neue", Arial, sans-serif;
+    font-family:Arial, sans-serif;
     background:var(--cream);
     color:var(--dark);
+    overflow-x:hidden;
 }
-
-/* SECTIONS */
 
 section{
     min-height:100vh;
@@ -42,96 +37,71 @@ section{
     overflow:hidden;
 }
 
-/* BLOBS */
-
-.blob{
-    position:absolute;
-    border-radius:50%;
-    opacity:.18;
-    z-index:0;
-}
-
-.blob-orange{
-    width:650px;
-    height:650px;
-
-    background:var(--orange);
-
-    top:-300px;
-    right:-250px;
-
-    border-radius:
-        60% 40% 45% 55% /
-        45% 55% 45% 55%;
-}
-
-.blob-yellow{
-    width:450px;
-    height:450px;
-
-    background:var(--yellow);
-
-    bottom:-180px;
-    left:-180px;
-
-    border-radius:
-        50% 50% 40% 60% /
-        60% 40% 60% 40%;
-}
-
-.blob-green{
-    width:280px;
-    height:280px;
-
-    background:var(--green);
-
-    bottom:80px;
-    right:-100px;
-
-    border-radius:
-        50% 50% 60% 40% /
-        40% 60% 40% 60%;
-}
-
 .content{
+    max-width:1100px;
+    text-align:center;
     position:relative;
     z-index:2;
-
-    width:100%;
-    max-width:1200px;
-
-    text-align:center;
 }
-
-/* TITLE */
 
 h1{
     font-size:clamp(3rem,8vw,6rem);
     margin-bottom:20px;
-    color:var(--dark);
 }
 
 p{
-    max-width:800px;
-
-    margin:auto;
-
-    line-height:1.8;
     font-size:1.2rem;
+    line-height:1.8;
 }
-
-/* PHOTOS */
 
 .story-photo{
-
     width:min(90vw,1000px);
-
     border-radius:30px;
-
     margin-bottom:40px;
-
-    box-shadow:
-        0 20px 60px rgba(0,0,0,.15);
+    box-shadow:0 20px 60px rgba(0,0,0,.15);
 }
 
-/* LANGUAGE
+/* BLOBS */
+
+.blob{
+    position:absolute;
+    opacity:.2;
+    z-index:1;
+}
+
+.orange{
+    width:600px;
+    height:600px;
+    background:var(--orange);
+
+    top:-250px;
+    right:-200px;
+
+    border-radius:
+        60% 40% 50% 50% /
+        50% 60% 40% 50%;
+}
+
+.yellow{
+    width:400px;
+    height:400px;
+    background:var(--yellow);
+
+    bottom:-150px;
+    left:-150px;
+
+    border-radius:
+        50% 60% 40% 50% /
+        60% 40% 60% 40%;
+}
+
+.green{
+    width:250px;
+    height:250px;
+    background:var(--green);
+
+    right:-60px;
+    bottom:80px;
+
+    border-radius:
+        60% 40% 
