@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+Put your HTML text here<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -42,11 +42,12 @@ body{
 
 .flower-shape{
     position:absolute;
-    width:260px;
-    height:220px;
+    width:320px;
+    height:1000px;
     top:80px;
     left:50px;
     background:#D94B5C;
+    opacity:.12;
     border-radius:50%;
     z-index:1;
     filter:
@@ -55,74 +56,16 @@ body{
         drop-shadow(0 40px 0 #D94B5C)
         drop-shadow(0 -40px 0 #D94B5C);
 }    
-/* ORANGE STRIPED ARCH */
-
-.arch{
-    position:absolute;
-    top:40px;
-    left:40px;
-
-    width:280px;
-    height:420px;
-
-    border-radius:150px 150px 0 0;
-
-    background:
-    repeating-linear-gradient(
-        90deg,
-        #D97732 0px,
-        #D97732 18px,
-        #F4C9A6 18px,
-        #F4C9A6 36px
-    );
-}
-
-.arch::after{
-    content:"";
-
-    position:absolute;
-
-    left:45px;
-    right:45px;
-    top:60px;
-    bottom:0;
-
-    border-radius:110px 110px 0 0;
-
-    background:#F7EFE6;
-}
-
-/* SAGE ARCH */
-
-.sage-arch{
-    position:absolute;
-
-    bottom:-120px;
-    right:-80px;
-
-    width:280px;
-    height:380px;
-
-    border-radius:140px 140px 0 0;
-
-    background:#8FA97D;
-
-    opacity:.15;
-}
 
 /* TERRACOTTA SHAPE */
 
 .accent{
     position:absolute;
-
     top:45%;
     right:15%;
-
     width:160px;
     height:160px;
-
     background:#C75A4A;
-
     opacity:.12;
 
     border-radius:
@@ -407,24 +350,29 @@ i momenti più belli sono sempre stati quelli vissuti insieme.
 
 <section>
 
-<div class="flower-shape"></div>
-    
+
 <div class="blob orange"></div>
 
 <div class="content fade-in">
 
 <div class="lang en">
 <h1>The Wedding</h1>
+
+<div class="flower-shape"></div>
+
+
 <p>Date, venue and practical information coming soon.</p>
 </div>
 
 <div class="lang fr" style="display:none">
 <h1>Le Mariage</h1>
+<div class="flower-shape"></div>
 <p>Date, lieu et informations pratiques à venir.</p>
 </div>
 
 <div class="lang it" style="display:none">
 <h1>Il Matrimonio</h1>
+<div class="flower-shape"></div>
 <p>Data, luogo e informazioni pratiche in arrivo.</p>
 </div>
 
@@ -438,9 +386,11 @@ i momenti più belli sono sempre stati quelli vissuti insieme.
 
 <div class="blob green"></div>
 
-<div class="content fade-in">
+<div class="blob green"></div>
+
 
 <div class="lang en">
+    
 <h1>RSVP</h1>
 <p>Please let us know if you can attend.</p>
 </div>
