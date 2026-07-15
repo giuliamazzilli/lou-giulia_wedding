@@ -426,16 +426,16 @@ i momenti più belli sono sempre stati quelli vissuti insieme.
 </div>
 
 </section>
-
+    
 <script>
 
 function showLang(lang){
 
-    document.querySelectorAll('.lang').forEach(function(el){
+    document.querySelectorAll('.lang').forEach(el => {
         el.style.display = 'none';
     });
 
-    document.querySelectorAll('.' + lang).forEach(function(el){
+    document.querySelectorAll('.lang.' + lang).forEach(el => {
         el.style.display = 'block';
     });
 
@@ -456,6 +456,8 @@ const observer = new IntersectionObserver(entries => {
 document.querySelectorAll('.fade-in').forEach(el => {
     observer.observe(el);
 });
+
+showLang('en');
 
 </script>
 
