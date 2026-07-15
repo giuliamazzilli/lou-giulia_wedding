@@ -212,17 +212,30 @@ p{
 
 .adventure-gallery{
     display:flex;
-    gap:20px;
     justify-content:center;
+    align-items:center;
+    gap:12px;
     margin-top:40px;
-    flex-wrap:wrap;
 }
 
 .gallery-photo{
     width:30%;
+    max-width:250px;
+    border-radius:20px;
     height:auto;
-    border-radius:30px;
-    object-fit:cover;
+}
+
+@media (max-width:768px){
+
+    .adventure-gallery{
+        width:100%;
+        justify-content:center;
+    }
+
+    .gallery-photo{
+        width:31%;
+    }
+
 }
 
 /* ANIMATIONS */
