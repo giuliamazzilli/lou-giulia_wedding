@@ -29,33 +29,77 @@ section {
     padding: 20px;
 }
 
-.slide1 { background: #f5ebe0; }
-.slide2 { background: #ffffff; }
-.slide3 { background: #f8f9fa; }
-.slide4 { background: #e9ecef; }
+.slide1 {
+    background: #f5ebe0;
+}
 
-.language-selector {
+.slide2 {
+    background: #ffffff;
+}
+
+.slide3 {
+    background: #f8f9fa;
+}
+
+.slide4 {
+    background: #e9ecef;
+}
+
+.corner-language-selector {
     position: fixed;
     top: 20px;
     right: 20px;
     z-index: 1000;
 }
 
-.language-selector button {
-    padding: 10px;
+.corner-language-selector button {
+    border: none;
+    background: white;
+    border-radius: 8px;
+    padding: 8px;
     margin-left: 5px;
     cursor: pointer;
+    font-size: 18px;
+}
+
+.hero-language-selector {
+    margin-top: 40px;
+
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.hero-language-selector button {
+    font-size: 1.3rem;
+    padding: 15px 25px;
+
     border: none;
-    border-radius: 8px;
+    border-radius: 12px;
+
+    background: white;
+    cursor: pointer;
+
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.hero-language-selector button:hover {
+    transform: scale(1.05);
 }
 
 h1 {
     font-size: 4rem;
+    margin-bottom: 10px;
 }
 
 p {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     max-width: 700px;
+}
+
+.content {
+    max-width: 800px;
 }
 
 </style>
@@ -63,102 +107,131 @@ p {
 
 <body>
 
-<div class="language-selector">
+<div class="corner-language-selector">
     <button onclick="showLang('en')">🇬🇧</button>
     <button onclick="showLang('fr')">🇫🇷</button>
     <button onclick="showLang('it')">🇮🇹</button>
 </div>
 
+<!-- SLIDE 1 -->
+
 <section class="slide1">
 
+<div class="content">
+
+<h1>Lou-Ann & Giulia</h1>
+
 <div class="lang en">
-    <h1>Lou-Ann & Giulia</h1>
     <p>Welcome to our wedding website</p>
 </div>
 
 <div class="lang fr" style="display:none">
-    <h1>Lou-Ann & Giulia</h1>
     <p>Bienvenue sur notre site de mariage</p>
 </div>
 
 <div class="lang it" style="display:none">
-    <h1>Lou-Ann & Giulia</h1>
     <p>Benvenuti sul nostro sito di matrimonio</p>
 </div>
 
+<div class="hero-language-selector">
+    <button onclick="showLang('en')">🇬🇧 English</button>
+    <button onclick="showLang('fr')">🇫🇷 Français</button>
+    <button onclick="showLang('it')">🇮🇹 Italiano</button>
+</div>
+
+</div>
+
 </section>
+
+<!-- SLIDE 2 -->
 
 <section class="slide2">
 
+<div class="content">
+
 <div class="lang en">
-    <div>
-        <h1>Our Story</h1>
-        <p>How we met...</p>
-    </div>
+    <h1>Our Story</h1>
+    <p>
+        Write here how you met and your story together.
+    </p>
 </div>
 
 <div class="lang fr" style="display:none">
-    <div>
-        <h1>Notre Histoire</h1>
-        <p>Comment nous nous sommes rencontrées...</p>
-    </div>
+    <h1>Notre Histoire</h1>
+    <p>
+        Racontez ici comment vous vous êtes rencontrées.
+    </p>
 </div>
 
 <div class="lang it" style="display:none">
-    <div>
-        <h1>La Nostra Storia</h1>
-        <p>Come ci siamo conosciute...</p>
-    </div>
+    <h1>La Nostra Storia</h1>
+    <p>
+        Raccontate qui come vi siete conosciute.
+    </p>
+</div>
+
 </div>
 
 </section>
+
+<!-- SLIDE 3 -->
 
 <section class="slide3">
 
+<div class="content">
+
 <div class="lang en">
-    <div>
-        <h1>The Wedding</h1>
-        <p>Date, venue and useful information.</p>
-    </div>
+    <h1>The Wedding</h1>
+    <p>
+        Date, venue and useful information.
+    </p>
 </div>
 
 <div class="lang fr" style="display:none">
-    <div>
-        <h1>Le Mariage</h1>
-        <p>Date, lieu et informations utiles.</p>
-    </div>
+    <h1>Le Mariage</h1>
+    <p>
+        Date, lieu et informations utiles.
+    </p>
 </div>
 
 <div class="lang it" style="display:none">
-    <div>
-        <h1>Il Matrimonio</h1>
-        <p>Data, luogo e informazioni utili.</p>
-    </div>
+    <h1>Il Matrimonio</h1>
+    <p>
+        Data, luogo e informazioni utili.
+    </p>
+</div>
+
 </div>
 
 </section>
 
+<!-- SLIDE 4 -->
+
 <section class="slide4">
 
+<div class="content">
+
 <div class="lang en">
-    <div>
-        <h1>RSVP</h1>
-        <p>Please let us know if you can attend.</p>
-    </div>
+    <h1>RSVP</h1>
+    <p>
+        Please let us know if you can attend.
+    </p>
 </div>
 
 <div class="lang fr" style="display:none">
-    <div>
-        <h1>RSVP</h1>
-        <p>Merci de confirmer votre présence.</p>
-    </div>
+    <h1>RSVP</h1>
+    <p>
+        Merci de confirmer votre présence.
+    </p>
 </div>
 
 <div class="lang it" style="display:none">
-    <div>
-        <h1>RSVP</h1>
-        <p>Fateci sapere se potrete partecipare.</p>
-    </div>
+    <h1>RSVP</h1>
+    <p>
+        Fateci sapere se potrete partecipare.
+    </p>
+</div>
+
 </div>
 
 </section>
@@ -181,3 +254,4 @@ function showLang(lang) {
 
 </body>
 </html>
+`
