@@ -38,6 +38,23 @@ body{
     pointer-events:none;
 }
 
+/* FLOWER SHAPE */
+
+.flower-shape{
+    width:320px;
+    height:240px;
+    background:#D94B5C;
+
+    border-radius:40%;
+
+    clip-path: polygon(
+    50% 0%, 65% 10%, 80% 5%, 95% 25%,
+    100% 50%, 95% 75%, 80% 95%, 50% 100%,
+    20% 95%, 5% 75%, 0% 50%, 5% 25%,
+    20% 5%, 35% 10%
+    );
+}
+    
 /* ORANGE STRIPED ARCH */
 
 .arch{
@@ -390,6 +407,8 @@ i momenti più belli sono sempre stati quelli vissuti insieme.
 
 <section>
 
+<div class="flower-shape"></div>
+    
 <div class="blob orange"></div>
 
 <div class="content fade-in">
