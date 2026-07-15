@@ -1,7 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Lou-Ann & Giulia</title>
 
 <style>
@@ -25,7 +28,7 @@ section {
 
     text-align: center;
 
-    padding: 50px 20px;
+    padding: 40px;
 }
 
 .hero {
@@ -44,6 +47,20 @@ section {
     background: #ececec;
 }
 
+h1 {
+    font-size: 4rem;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1.3rem;
+    line-height: 1.7;
+}
+
+.content {
+    max-width: 900px;
+}
+
 .corner-language-selector {
     position: fixed;
     top: 20px;
@@ -54,20 +71,22 @@ section {
 .corner-language-selector button {
     border: none;
     background: white;
-    border-radius: 10px;
-    padding: 10px;
+
+    padding: 8px 12px;
     margin-left: 5px;
+
+    border-radius: 8px;
     cursor: pointer;
-    font-size: 20px;
 }
 
 .hero-language-selector {
     margin-top: 40px;
 
     display: flex;
-    gap: 20px;
     justify-content: center;
     flex-wrap: wrap;
+
+    gap: 15px;
 }
 
 .hero-language-selector button {
@@ -76,64 +95,27 @@ section {
 
     border-radius: 12px;
 
-    font-size: 1.3rem;
-
     padding: 18px 30px;
+    font-size: 1.2rem;
 
     cursor: pointer;
 
-    box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+    box-shadow: 0 6px 20px rgba(0,0,0,.12);
 }
 
 .hero-language-selector button:hover {
     transform: scale(1.05);
 }
 
-.hero-content {
-    max-width: 900px;
-}
-
-.hero-content h1 {
-    font-size: 5rem;
-    margin-bottom: 20px;
-}
-
-.story-container {
-    max-width: 1000px;
-}
-
-.story-photo {
-    width: 100%;
-    max-width: 900px;
-
-    border-radius: 25px;
-
-    box-shadow: 0 20px 50px rgba(0,0,0,0.15);
-}
-
-.story-text {
-    margin-top: 30px;
-    font-size: 1.4rem;
-    line-height: 1.7;
-}
-
 .fade-in {
     opacity: 0;
     transform: translateY(50px);
-    transition: all 1.2s ease;
+    transition: all 1.1s ease;
 }
 
 .fade-in.visible {
     opacity: 1;
     transform: translateY(0);
-}
-
-h1 {
-    font-size: 4rem;
-}
-
-p {
-    font-size: 1.3rem;
 }
 
 </style>
@@ -142,16 +124,14 @@ p {
 <body>
 
 <div class="corner-language-selector">
-    <button onclick="showLang('en')">🇬🇧</button>
-    <button onclick="showLang('fr')">🇫🇷</button>
-    <button onclick="showLang('it')">🇮🇹</button>
+    <button onclick="showLang('en')">GB</button>
+    <button onclick="showLang('fr')">FR</button>
+    <button onclick="showLang('it')">IT</button>
 </div>
-
-<!-- HERO -->
 
 <section class="hero">
 
-<div class="hero-content">
+<div class="content">
 
 <h1>Lou-Ann & Giulia</h1>
 
@@ -177,134 +157,81 @@ p {
 
 </section>
 
-<!-- STORY PHOTO 1 -->
-
 <section class="story">
 
-<div class="story-container fade-in">
-
-images/brunch.jpeg"
-class="story-photo">
+<div class="content fade-in">
 
 <div class="lang en">
-<h1>Our Story</h1>
-
-<p class="story-text">
-Every great adventure begins with a simple meeting.
-What started with brunches, conversations and laughter
-slowly turned into a beautiful life shared together.
-</p>
+    <h1>Our Story</h1>
+    <p>
+        Every great adventure begins with a simple meeting.
+        What started with conversations and laughter slowly turned
+        into a beautiful life shared together.
+    </p>
 </div>
 
 <div class="lang fr" style="display:none">
-<h1>Notre Histoire</h1>
-
-<p class="story-text">
-Toute belle aventure commence par une simple rencontre.
-Ce qui a commencé par des brunchs et des conversations
-est devenu une magnifique histoire à deux.
-</p>
+    <h1>Notre Histoire</h1>
+    <p>
+        Toute belle aventure commence par une simple rencontre.
+        Ce qui a commencé par des conversations et des rires
+        est devenu une magnifique histoire à deux.
+    </p>
 </div>
 
 <div class="lang it" style="display:none">
-<h1>La Nostra Storia</h1>
-
-<p class="story-text">
-Ogni grande avventura inizia con un semplice incontro.
-Quello che è iniziato con brunch, chiacchiere e risate
-si è trasformato in una bellissima vita insieme.
-</p>
+    <h1>La Nostra Storia</h1>
+    <p>
+        Ogni grande avventura inizia con un semplice incontro.
+        Quello che è iniziato con chiacchiere e risate si è
+        trasformato in una bellissima vita insieme.
+    </p>
 </div>
 
 </div>
 
 </section>
-
-<!-- STORY PHOTO 2 -->
-
-<section class="story">
-
-<div class="story-container fade-in">
-
-"
-alt="Adventure"
-class="story-photo">
-
-<div class="lang en">
-<h1>Our Adventures</h1>
-
-<p class="story-text">
-From quiet weekends to unforgettable journeys,
-the best moments have always been the ones spent together.
-</p>
-</div>
-
-<div class="lang fr" style="display:none">
-<h1>Nos Aventures</h1>
-
-<p class="story-text">
-Des week-ends tranquilles aux voyages inoubliables,
-les plus beaux souvenirs sont ceux vécus ensemble.
-</p>
-</div>
-
-<div class="lang it" style="display:none">
-<h1>Le Nostre Avventure</h1>
-
-<p class="story-text">
-Dai weekend tranquilli ai viaggi indimenticabili,
-i momenti più belli sono sempre stati quelli vissuti insieme.
-</p>
-</div>
-
-</div>
-
-</section>
-
-<!-- WEDDING -->
 
 <section class="wedding">
 
-<div class="fade-in">
+<div class="content fade-in">
 
 <div class="lang en">
-<h1>The Wedding</h1>
-<p>Date, venue and practical information coming soon.</p>
+    <h1>The Wedding</h1>
+    <p>Date, venue and practical information coming soon.</p>
 </div>
 
 <div class="lang fr" style="display:none">
-<h1>Le Mariage</h1>
-<p>Date, lieu et informations pratiques à venir.</p>
+    <h1>Le Mariage</h1>
+    <p>Date, lieu et informations pratiques à venir.</p>
 </div>
 
 <div class="lang it" style="display:none">
-<h1>Il Matrimonio</h1>
-<p>Data, luogo e informazioni pratiche in arrivo.</p>
+    <h1>Il Matrimonio</h1>
+    <p>Data, luogo e informazioni pratiche in arrivo.</p>
 </div>
 
 </div>
 
 </section>
 
-<!-- RSVP -->
-
 <section class="rsvp">
 
-<div class="fade-in">
+<div class="content fade-in">
 
 <div class="lang en">
-<h1>RSVP</h1>
-<p>Please let us know if you can attend.</p>
+    <h1>RSVP</h1>
+    <p>Please let us know if you can attend.</p>
 </div>
 
 <div class="lang fr" style="display:none">
-<h1>RSVP</h1>
-<p>Merci de confirmer votre présence.</p>
+    <h1>RSVP</h1>
+    <p>Merci de confirmer votre présence.</p>
 </div>
 
 <div class="lang it" style="display:none">
-<h1>RSVP</h1>
-<p>Fateci sapere se potrete partecipare.</p>
+    <h1>RSVP</h1>
+    <p>Fateci sapere se potrete partecipare.</p>
 </div>
 
 </div>
@@ -327,7 +254,7 @@ function showLang(lang) {
 
 const observer = new IntersectionObserver((entries) => {
 
-    entries.forEach(entry => {
+    entries.forEach((entry) => {
 
         if (entry.isIntersecting) {
             entry.target.classList.add('visible');
@@ -337,7 +264,7 @@ const observer = new IntersectionObserver((entries) => {
 
 });
 
-document.querySelectorAll('.fade-in').forEach(el => {
+document.querySelectorAll('.fade-in').forEach((el) => {
     observer.observe(el);
 });
 
@@ -345,3 +272,4 @@ document.querySelectorAll('.fade-in').forEach(el => {
 
 </body>
 </html>
+``
