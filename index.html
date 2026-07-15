@@ -24,9 +24,109 @@ html{
 body{
     margin:0;
     font-family:Arial,sans-serif;
-    background:var(--cream);
+    background:#F7EFE6;
     color:var(--dark);
     overflow-x:hidden;
+}
+
+/* FIXED BACKGROUND */
+
+.invitation-bg{
+    position:fixed;
+    inset:0;
+    z-index:0;
+    pointer-events:none;
+}
+
+/* ORANGE STRIPED ARCH */
+
+.arch{
+    position:absolute;
+    top:40px;
+    left:40px;
+
+    width:280px;
+    height:420px;
+
+    border-radius:150px 150px 0 0;
+
+    background:
+    repeating-linear-gradient(
+        90deg,
+        #D97732 0px,
+        #D97732 18px,
+        #F4C9A6 18px,
+        #F4C9A6 36px
+    );
+}
+
+.arch::after{
+    content:"";
+
+    position:absolute;
+
+    left:45px;
+    right:45px;
+    top:60px;
+    bottom:0;
+
+    border-radius:110px 110px 0 0;
+
+    background:#F7EFE6;
+}
+
+/* SAGE ARCH */
+
+.sage-arch{
+    position:absolute;
+
+    bottom:-120px;
+    right:-80px;
+
+    width:280px;
+    height:380px;
+
+    border-radius:140px 140px 0 0;
+
+    background:#8FA97D;
+
+    opacity:.15;
+}
+
+/* TERRACOTTA SHAPE */
+
+.accent{
+    position:absolute;
+
+    top:45%;
+    right:15%;
+
+    width:160px;
+    height:160px;
+
+    background:#C75A4A;
+
+    opacity:.12;
+
+    border-radius:
+        60% 40% 55% 45% /
+        45% 55% 40% 60%;
+}
+
+section{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:80px 20px;
+    position:relative;
+}
+
+.content{
+    position:relative;
+    z-index:2;
+    max-width:1100px;
+    text-align:center;
 }
 
 section{
@@ -152,6 +252,12 @@ p{
 
 <body>
 
+<div class="invitation-bg">
+    <div class="arch"></div>
+    <div class="sage-arch"></div>
+    <div class="accent"></div>
+</div>
+
 <div class="corner-language-selector">
     <button onclick="showLang('en')">🇬🇧</button>
     <button onclick="showLang('fr')">🇫🇷</button>
@@ -201,7 +307,7 @@ p{
 
 <div class="content fade-in">
 
-<img src="images/brunch.jpeg" alt
+<img src="images/br
     
 <div class="lang en">
 <h1>Our Story</h1>
@@ -243,8 +349,7 @@ si è trasformato in una bellissima vita insieme.
 
 <div class="content fade-in">
 
-images/adventure.jpegAdventure together"
-     class="story-photo">
+<mages/adventure.jpeg
 
 <div class="lang en">
 <h1>Our Adventures</h1>
