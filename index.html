@@ -224,13 +224,64 @@ p{
 
 @media (max-width:768px){
 
-    .adventure-gallery{
+    .content{
         width:100%;
+        max-width:100%;
+        padding:0 10px;
+        box-sizing:border-box;
+    }
+
+    .page-yellow{
+        width:120vw;
+        left:50%;
+        transform:translateX(-50%);
+    }
+
+    .flower-shape{
+        width:180px;
+        height:500px;
+        left:50%;
+        transform:translateX(-50%);
+        top:20px;
+    }
+
+    .orange{
+        width:300px;
+        height:300px;
+        right:-120px;
+        top:-120px;
+    }
+
+    .green{
+        width:150px;
+        height:150px;
+        right:-40px;
+    }
+
+    h1{
+        font-size:clamp(2.5rem,10vw,4rem);
+    }
+
+    p{
+        font-size:1rem;
+        padding:0 10px;
+    }
+
+    .corner-language-selector{
+        top:10px;
+        right:10px;
+    }
+
+    .adventure-gallery{
+        display:flex;
         justify-content:center;
+        gap:8px;
+        width:100%;
     }
 
     .gallery-photo{
-        width:31%;
+        width:30%;
+        max-width:none;
     }
 
 }
@@ -254,7 +305,7 @@ p{
 <body>
 
 <div class="blob yellow page-yellow"></div>
-`
+    
 <div class="corner-language-selector">
     <button onclick="showLang('en')">🇬🇧</button>
     <button onclick="showLang('fr')">🇫🇷</button>
