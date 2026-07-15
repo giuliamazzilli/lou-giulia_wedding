@@ -7,17 +7,17 @@
 <style>
 
 html {
-    scroll-snap-type: y mandatory;
     scroll-behavior: smooth;
 }
 
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    overflow-x: hidden;
 }
 
 section {
-    height: 100vh;
+    min-height: 100vh;
 
     display: flex;
     justify-content: center;
@@ -25,24 +25,23 @@ section {
 
     text-align: center;
 
-    scroll-snap-align: start;
-    padding: 20px;
+    padding: 50px 20px;
 }
 
-.slide1 {
+.hero {
     background: #f5ebe0;
 }
 
-.slide2 {
-    background: #ffffff;
+.story {
+    background: white;
 }
 
-.slide3 {
-    background: #f8f9fa;
+.wedding {
+    background: #f7f7f7;
 }
 
-.slide4 {
-    background: #e9ecef;
+.rsvp {
+    background: #ececec;
 }
 
 .corner-language-selector {
@@ -55,51 +54,86 @@ section {
 .corner-language-selector button {
     border: none;
     background: white;
-    border-radius: 8px;
-    padding: 8px;
+    border-radius: 10px;
+    padding: 10px;
     margin-left: 5px;
     cursor: pointer;
-    font-size: 18px;
+    font-size: 20px;
 }
 
 .hero-language-selector {
     margin-top: 40px;
 
     display: flex;
+    gap: 20px;
     justify-content: center;
-    gap: 15px;
     flex-wrap: wrap;
 }
 
 .hero-language-selector button {
-    font-size: 1.3rem;
-    padding: 15px 25px;
-
     border: none;
+    background: white;
+
     border-radius: 12px;
 
-    background: white;
+    font-size: 1.3rem;
+
+    padding: 18px 30px;
+
     cursor: pointer;
 
-    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.12);
 }
 
 .hero-language-selector button:hover {
     transform: scale(1.05);
 }
 
+.hero-content {
+    max-width: 900px;
+}
+
+.hero-content h1 {
+    font-size: 5rem;
+    margin-bottom: 20px;
+}
+
+.story-container {
+    max-width: 1000px;
+}
+
+.story-photo {
+    width: 100%;
+    max-width: 900px;
+
+    border-radius: 25px;
+
+    box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+}
+
+.story-text {
+    margin-top: 30px;
+    font-size: 1.4rem;
+    line-height: 1.7;
+}
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 1.2s ease;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 h1 {
     font-size: 4rem;
-    margin-bottom: 10px;
 }
 
 p {
     font-size: 1.3rem;
-    max-width: 700px;
-}
-
-.content {
-    max-width: 800px;
 }
 
 </style>
@@ -113,11 +147,11 @@ p {
     <button onclick="showLang('it')">🇮🇹</button>
 </div>
 
-<!-- SLIDE 1 -->
+<!-- HERO -->
 
-<section class="slide1">
+<section class="hero">
 
-<div class="content">
+<div class="hero-content">
 
 <h1>Lou-Ann & Giulia</h1>
 
@@ -143,93 +177,134 @@ p {
 
 </section>
 
-<!-- SLIDE 2 -->
+<!-- STORY PHOTO 1 -->
 
-<section class="slide2">
+<section class="story">
 
-<div class="content">
+<div class="story-container fade-in">
+
+images/brunch.jpeg"
+class="story-photo">
 
 <div class="lang en">
-    <h1>Our Story</h1>
-    <p>
-        Write here how you met and your story together.
-    </p>
+<h1>Our Story</h1>
+
+<p class="story-text">
+Every great adventure begins with a simple meeting.
+What started with brunches, conversations and laughter
+slowly turned into a beautiful life shared together.
+</p>
 </div>
 
 <div class="lang fr" style="display:none">
-    <h1>Notre Histoire</h1>
-    <p>
-        Racontez ici comment vous vous êtes rencontrées.
-    </p>
+<h1>Notre Histoire</h1>
+
+<p class="story-text">
+Toute belle aventure commence par une simple rencontre.
+Ce qui a commencé par des brunchs et des conversations
+est devenu une magnifique histoire à deux.
+</p>
 </div>
 
 <div class="lang it" style="display:none">
-    <h1>La Nostra Storia</h1>
-    <p>
-        Raccontate qui come vi siete conosciute.
-    </p>
+<h1>La Nostra Storia</h1>
+
+<p class="story-text">
+Ogni grande avventura inizia con un semplice incontro.
+Quello che è iniziato con brunch, chiacchiere e risate
+si è trasformato in una bellissima vita insieme.
+</p>
 </div>
 
 </div>
 
 </section>
 
-<!-- SLIDE 3 -->
+<!-- STORY PHOTO 2 -->
 
-<section class="slide3">
+<section class="story">
 
-<div class="content">
+<div class="story-container fade-in">
+
+"
+alt="Adventure"
+class="story-photo">
 
 <div class="lang en">
-    <h1>The Wedding</h1>
-    <p>
-        Date, venue and useful information.
-    </p>
+<h1>Our Adventures</h1>
+
+<p class="story-text">
+From quiet weekends to unforgettable journeys,
+the best moments have always been the ones spent together.
+</p>
 </div>
 
 <div class="lang fr" style="display:none">
-    <h1>Le Mariage</h1>
-    <p>
-        Date, lieu et informations utiles.
-    </p>
+<h1>Nos Aventures</h1>
+
+<p class="story-text">
+Des week-ends tranquilles aux voyages inoubliables,
+les plus beaux souvenirs sont ceux vécus ensemble.
+</p>
 </div>
 
 <div class="lang it" style="display:none">
-    <h1>Il Matrimonio</h1>
-    <p>
-        Data, luogo e informazioni utili.
-    </p>
+<h1>Le Nostre Avventure</h1>
+
+<p class="story-text">
+Dai weekend tranquilli ai viaggi indimenticabili,
+i momenti più belli sono sempre stati quelli vissuti insieme.
+</p>
 </div>
 
 </div>
 
 </section>
 
-<!-- SLIDE 4 -->
+<!-- WEDDING -->
 
-<section class="slide4">
+<section class="wedding">
 
-<div class="content">
+<div class="fade-in">
 
 <div class="lang en">
-    <h1>RSVP</h1>
-    <p>
-        Please let us know if you can attend.
-    </p>
+<h1>The Wedding</h1>
+<p>Date, venue and practical information coming soon.</p>
 </div>
 
 <div class="lang fr" style="display:none">
-    <h1>RSVP</h1>
-    <p>
-        Merci de confirmer votre présence.
-    </p>
+<h1>Le Mariage</h1>
+<p>Date, lieu et informations pratiques à venir.</p>
 </div>
 
 <div class="lang it" style="display:none">
-    <h1>RSVP</h1>
-    <p>
-        Fateci sapere se potrete partecipare.
-    </p>
+<h1>Il Matrimonio</h1>
+<p>Data, luogo e informazioni pratiche in arrivo.</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- RSVP -->
+
+<section class="rsvp">
+
+<div class="fade-in">
+
+<div class="lang en">
+<h1>RSVP</h1>
+<p>Please let us know if you can attend.</p>
+</div>
+
+<div class="lang fr" style="display:none">
+<h1>RSVP</h1>
+<p>Merci de confirmer votre présence.</p>
+</div>
+
+<div class="lang it" style="display:none">
+<h1>RSVP</h1>
+<p>Fateci sapere se potrete partecipare.</p>
 </div>
 
 </div>
@@ -250,8 +325,23 @@ function showLang(lang) {
 
 }
 
+const observer = new IntersectionObserver((entries) => {
+
+    entries.forEach(entry => {
+
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+        }
+
+    });
+
+});
+
+document.querySelectorAll('.fade-in').forEach(el => {
+    observer.observe(el);
+});
+
 </script>
 
 </body>
 </html>
-`
