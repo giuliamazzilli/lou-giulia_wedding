@@ -74,12 +74,18 @@ body{
 }
 
 section{
-    min-height:100vh;
+    min-height:auto;
     display:flex;
     justify-content:center;
-    align-items:center;
-    padding:80px 20px;
+    align-items:flex-start;
+    padding:40px 20px;
     position:relative;
+}
+
+/* Keep the first (hero) section full viewport height */
+section:first-of-type{
+    min-height:100vh;
+    align-items:center;
 }
 
 .content{
@@ -92,13 +98,19 @@ section{
 }
 
 section{
-    min-height:100vh;
+    min-height:auto;
     display:flex;
     justify-content:center;
-    align-items:center;
-    padding:80px 20px;
+    align-items:flex-start;
+    padding:40px 20px;
     position:relative;
     overflow:visible;
+}
+
+/* Keep the first (hero) section full viewport height */
+section:first-of-type{
+    min-height:100vh;
+    align-items:center;
 }
 
 /* HEADING 1 STYLE */
@@ -293,6 +305,23 @@ overflow: hidden;
         height:auto;
     }
 
+    .our-story video{
+        border-radius:32px;
+        overflow:hidden;
+    }
+
+}
+
+.our-story video{
+border-radius:32px;
+overflow:hidden;
+height:400px;
+}
+
+.final-video {
+transform: rotate(90deg);
+border-radius: 32px;
+overflow: hidden;
 }
 
 /* ANIMATIONS */
@@ -306,18 +335,6 @@ overflow: hidden;
 .fade-in.visible{
     opacity:1;
     transform:translateY(0);
-}
-
-.our-story video{
-border-radius:32px;
-overflow:hidden;
-height:400px;
-}
-
-.final-video {
-transform: rotate(90deg);
-border-radius: 32px;
-overflow: hidden;
 }
     
 </style>
@@ -334,6 +351,21 @@ overflow: hidden;
 </div>
 
 <!-- HERO -->
+
+<style>
+/* Ensure the Adventure photo matches the Brunch photo height and is responsive */
+img.gallery-photo[alt="Adventure"] {
+    height: 240px;
+    object-fit: cover;
+    width: auto;
+    max-width: 100%;
+}
+@media (max-width: 600px) {
+    img.gallery-photo[alt="Adventure"] {
+        height: 125px;
+    }
+}
+</style>
 
 <section>
 
@@ -379,16 +411,16 @@ overflow: hidden;
     <img src="images/adventure.jpeg" alt="Adventure" class="gallery-photo">
 </div>
 
+
+
 <div class="lang en">
     
 <h1>Our Story</h1>
-<p>
-From Scotland to France.
-Every great adventure begins with a simple meeting. Work meeting in our case.
-Lou-Ann might have forced Giulia in way to many tasks back in the days.
-Then it was time for the carpooling, laughs and intensive sing along sessions.
-Small little things slowly turned into a beautiful life shared together.
-</p>
+<p>From Scotland to France.</p>
+<p>Every great adventure begins with a simple meeting. Work meeting in our case.<p>
+<p>Lou-Ann might have forced Giulia in way to many tasks back in the days.<p>
+<p>Then it was time for the carpooling, laughs and intensive sing along sessions.<p>
+<p>Small little things slowly turned into a beautiful life shared together.</p>
 </div>
 
 <div class="lang fr" style="display:none">
@@ -403,13 +435,12 @@ Petit à petit, ces petits moments du quotidien se sont transformés en une magn
 
 <div class="lang it" style="display:none">
 <h1>La Nostra Storia</h1>
-<p>
-Dalla Scozia alla Francia.
-Ogni grande avventura inizia con un semplice incontro. Nel nostro caso, un incontro di lavoro.
-Forse, all’epoca, Lou‑Ann ha assegnato a Giulia un po’ troppi compiti.
-Poi sono arrivati i viaggi in macchina insieme, le risate e le intense sessioni di canto a squarciagola.
-A poco a poco, quelle piccole cose si sono trasformate in una bellissima vita condivisa insieme.
-</p>
+<p>Dalla Scozia alla Francia.</p>
+<p>Ogni grande avventura inizia con un semplice incontro.</p>
+<p>Nel nostro caso, un incontro di lavoro.</p>
+<p></p>Forse, all’epoca, Lou‑Ann ha assegnato a Giulia un po’ troppi compiti.</p>
+<p>Poi sono arrivati i viaggi in macchina insieme, le risate e le intense sessioni di canto a squarciagola.</p>
+<p>A poco a poco, quelle piccole cose si sono trasformate in una bellissima vita condivisa insieme.</p>
 </div>
     
 <div class="our-story">
@@ -484,46 +515,26 @@ i momenti più belli sono sempre stati quelli vissuti insieme.
 
 <h1>The Wedding</h1>
 
-<p>Le Domaine des Ayasses
- 1445 Route de Upie – 26400 Vaunaveys-la-Rochette
-
-GPS coordinates of the venue
- N 44.783346 E 5.012383
- (Select the Latitude/Longitude option on your GPS.)
-
-Google Maps recognizes Gîtes les Ayasses:
- https://goo.gl/maps/Cf8WwJ2MHZJmGYmBA
-
-Please note: Do not enter "Les Ayasses" into your GPS, as it may direct you to the surrounding countryside instead of the venue.</p>
+<h2>Le Domaine des Ayasses<h2>
+ <h3>1445 Route de Upie – 26400 Vaunaveys-la-Rochette</h3>
+    <p><a href="https://goo.gl/maps/Cf8WwJ2MHZJmGYmBA" target="_blank">View the location on Google Maps</a></p>
 </div>
 
 <div class="lang fr" style="display:none">
 <h1>Le Mariage</h1>
 <div class="flower-shape"></div>
-<p>Le Domaine des Ayasses
-1445 route de Upie – 26400 Vaunaveys la Rochette
 
-Coordonnées GPS du domaine
-N 44.783346 E 5.012383 (option Latitude Longitude dans votre GPS)
-Google Maps connait Gîtes les Ayasses : https://goo.gl/maps/Cf8WwJ2MHZJmGYmBA</p>
-
-Attention ! Ne pas indiquer les Ayasses dans votre GPS, il vous emmènerait dans la campagne environnante !
+<h2>Le Domaine des Ayasses<h2>
+ <h3>1445 Route de Upie – 26400 Vaunaveys-la-Rochette</h3>
+    <p><a href="https://goo.gl/maps/Cf8WwJ2MHZJmGYmBA" target="_blank">Chercher la location sur Google Maps</a></p>
 </div>
 
 <div class="lang it" style="display:none">
 <h1>Il Matrimonio</h1>
 <div class="flower-shape"></div>
-<p>Le Domaine des Ayasses
- 1445 Route de Upie – 26400 Vaunaveys-la-Rochette
-
-Coordinate GPS della struttura
- N 44.783346 E 5.012383
- (Selezionare l'opzione Latitudine/Longitudine sul navigatore GPS.)
-
-Google Maps riconosce Gîtes les Ayasses:
- https://goo.gl/maps/Cf8WwJ2MHZJmGYmBA
-
-Attenzione: Non inserite semplicemente "Les Ayasses" nel navigatore GPS, poiché potrebbe condurvi nella campagna circostante anziché alla struttura.</p>
+<h2>Le Domaine des Ayasses<h2>
+ <h3>1445 Route de Upie – 26400 Vaunaveys-la-Rochette</h3>
+    <p><a href="https://goo.gl/maps/Cf8WwJ2MHZJmGYmBA" target="_blank">Trova il luogo su Google Maps</a></p>
 </div>
 
 </div>
@@ -553,9 +564,22 @@ Attenzione: Non inserite semplicemente "Les Ayasses" nel navigatore GPS, poiché
     <p>Fateci sapere se potrete partecipare.</p>
 </div>
   
-<video class= "final-video" autoplay muted loop height="400">
-<source src = "videos/final.mp4" type="video/mp4">
+<video class="final-video" autoplay muted loop>
+<source src="videos/final.mp4" type="video/mp4">
 </video>
+
+<style>
+.final-video {
+  height: 400px;
+  max-width: 100%;
+}
+
+@media (max-width: 600px) {
+  .final-video {
+    height: 150px;
+  }
+}
+</style>
 
     
 </div>
